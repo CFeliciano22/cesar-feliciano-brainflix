@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.scss';
+import Header from "./components/Header/Header";
+import Vids from './data/video-details.json';
+import Main from './components/Main/Main';
 
-function App() {
+class App extends React.Component {
+  state = {
+    Vids: Vids,
+    currentVideo: Vids[0]
+  }
+changeVideo = (id) => {
+  const newVideoId = this.state.Vids.findIndex(video => id === video.id)
+  this.setState({
+    currentVideo:this.state.Vids[newVideoId]
+  })
+}
+
+
+  render() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+      <Header/>
+      <Main
+        Vids={this.state.Vids}
+        currentVideo={this.state.currentVideo}
+        changeVideo={this.changeVideo} 
+        />
+        
+        
+      </>
   );
+  }
 }
 
 export default App;

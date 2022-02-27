@@ -1,0 +1,36 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/fonts' as *;
+
+*{
+    box-sizing: border-box;   
+} 
+
+body,h1,h2,h3,p{
+    margin: 0;
+}
+
+.video-list__item--title{
+    padding-bottom: 1rem;
+}
+
+.video-list__item{
+    list-style-type: none;
+    display: flex;
+    padding-bottom: 1rem;
+    text-decoration: none;
+    color: $black;
+}
+.video-list__items{
+    list-style-type: none;
+}
+
+.video-list__item--image{
+    width: 8.5rem;
+    height: 6rem;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.video-list__item--text-container{
+    padding-left: 1rem;
+}

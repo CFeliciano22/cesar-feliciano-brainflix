@@ -1,0 +1,117 @@
+@use '../../styles/partials/colors' as *;
+
+.video{
+    width: 100%;
+}
+.video__title{
+    padding: 1.5rem 0;
+    border-bottom: solid 1px $mercury;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    padding-right: 1rem;
+    padding-left: 4.25rem;
+    position: relative;
+}
+
+.form__comment-icon{
+    height: 1.5rem;
+    width: 1.5rem;
+    position: absolute;
+    bottom: .5rem;
+    left: 5rem;
+}
+.video__comments{
+    padding-bottom: 1rem;
+    
+}
+
+.video__content-container{
+    padding: 0 1rem;
+}
+
+.video__props-container{
+    padding: 1rem 0;
+    border-bottom: solid 1px $mercury;
+    display: flex;
+    justify-content: space-between;
+}
+
+.video__props--channel{
+    padding-bottom: 1rem;
+}
+.video__props--views{
+    padding-bottom: 1rem;
+    
+}
+.video__props--views-image{
+    padding-right: .5rem;
+}
+.video__props--likes-image{
+    padding-right: 1rem;
+}
+.video__description{
+    padding: 1rem 0;
+}
+
+.form__avatar{
+    height: 2.25rem;
+    width: 2.25rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 1.75rem;
+    left: 1rem
+}
+
+.form__button{
+    color: $white;
+    background-color: $blue;
+    border: none;
+    border-radius: .3125rem;
+    height: 2.5rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+.form__input{
+    height: 5rem;
+    padding-bottom: 3rem;
+    border: solid 1px $silver;
+    border-radius: 4px;
+    background-color: $alabaster;
+    margin-top: .5rem;
+    padding-left:.5rem ;
+}
+
+.comments-list__item{
+ display: flex;
+ justify-content: space-between;
+}
+.comments-list{
+    list-style-type: none;
+    border-bottom: solid 1px $mercury;
+    padding-top: 1rem;
+    padding-left: 3.25rem;
+    position: relative;
+}
+
+.comments-list__border-top{
+    border-top: solid 1px $mercury;
+}
+.comments{
+    padding:0 1rem;
+}
+.comments-list__item--comment{
+    padding: 1rem 0;
+}
+
+.comments-list__item--avatar{
+    height: 2.25rem;
+    width: 2.25rem;
+    background-color: $mercury;
+    border-radius: 50%;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+}
