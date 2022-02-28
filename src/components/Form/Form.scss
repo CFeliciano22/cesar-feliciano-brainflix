@@ -1,0 +1,71 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/mixins' as *;
+
+.form{
+    display: flex;
+    flex-direction: column;
+    padding-right: 1rem;
+    padding-left: 4.25rem;
+    position: relative;
+
+    &__comment-icon{
+        height: 1.5rem;
+        width: 1.5rem;
+        position: absolute;
+        bottom: .5rem;
+        left: 5rem;
+    }
+    &__avatar{
+        height: 2.25rem;
+        width: 2.25rem;
+        border-radius: 50%;
+        position: absolute;
+        top: 1.75rem;
+        left: 1rem
+    }
+    &__button{
+        color: $white;
+        background-color: $blue;
+        border: none;
+        border-radius: .3125rem;
+        height: 2.5rem;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    &__input{
+        height: 5rem; 
+        padding-bottom: 3rem;
+        border: solid 1px $silver;
+        border-radius: 4px;
+        background-color: $alabaster;
+        margin-top: .5rem;
+        padding-left:.5rem ;
+        width: 100%;
+    }
+}
+@include tablet{
+    .form{
+        &__input{
+            padding-bottom: 0;
+            height: 2.25rem;
+            width: 80%;
+            
+        }
+        &__button{
+            width: 30%;
+            margin-left: 1rem;
+            margin-top: .5rem;
+        }
+       &__input-container{
+           display: flex;
+           justify-content: space-between;
+           position: relative;
+       }
+       &__comment-icon{
+          
+       }
+       
+    }
+    
+}
+

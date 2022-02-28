@@ -1,0 +1,38 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/mixins' as *;
+
+.comments{
+    padding:0 1rem;
+}
+
+
+.comments-list{
+    list-style-type: none;
+    border-bottom: solid 1px $mercury;
+    padding-top: 1rem;
+    padding-left: 3.25rem;
+    position: relative;
+
+    &__item{
+        display: flex;
+        justify-content: space-between;
+       }
+    &__border-top{
+        border-top: solid 1px $mercury;
+    }
+    
+    &__item--comment{
+        padding: 1rem 0;
+    }
+    
+    &__item--avatar{
+        height: 2.25rem;
+        width: 2.25rem;
+        background-color: $mercury;
+        border-radius: 50%;
+        position: absolute;
+        top: 1rem;
+        left: 0;
+    }
+    
+}

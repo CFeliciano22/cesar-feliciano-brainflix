@@ -1,0 +1,11 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/mixins' as *;
+
+@include desktop{
+    .main-container{
+        display: flex;
+    }
+    .main-small-container{
+        flex-direction: column;
+    }
+}
