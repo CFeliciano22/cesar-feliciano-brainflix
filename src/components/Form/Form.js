@@ -11,7 +11,7 @@ export default function Form(){
 <input className='form__input' name='comment' for='comment' placeholder='Add a new comment'/>
 
 <button className='form__button'>COMMENT</button>
-<img className='form__comment-icon--tablet' src={Post} alt='post'/>
+
 
 </div>
 <img className='form__comment-icon' src={Post} alt='post'/>
