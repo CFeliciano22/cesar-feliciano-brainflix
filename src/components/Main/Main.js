@@ -19,6 +19,7 @@ export default function Main({Vids, currentVideo, changeVideo}){
                 currentVideo={currentVideo}
             />
             <Comments
+                Vids={Vids}
                 currentVideo={currentVideo}
             />
             </div> 
