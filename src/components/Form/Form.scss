@@ -8,6 +8,11 @@
     padding-left: 4.25rem;
     position: relative;
 
+    &__label{
+        font-size: 13px;
+        font-weight: 400;
+        color: $silver;
+    }
     &__comment-icon{
         height: 1.5rem;
         width: 1.5rem;
@@ -43,8 +48,15 @@
         width: 100%;
     }
 }
+
+.form__button-container{
+    width: 50%;
+}
 @include tablet{
     .form{
+        &__label{
+            font-size: 14px;
+        }
         &__input{
             padding-bottom: 0;
             height: 2.25rem;
@@ -55,16 +67,21 @@
             width: 30%;
             margin-left: 1rem;
             margin-top: .5rem;
+            position: relative;
         }
        &__input-container{
            display: flex;
            justify-content: space-between;
-           position: relative;
        }
        &__comment-icon{
-          
+           display: none;
        }
-       
+       &__comment-icon--tablet{
+           position: absolute;
+           background-color: black;
+           right: 14rem;
+           top: 2.25rem;
+       }
     }
     
 }

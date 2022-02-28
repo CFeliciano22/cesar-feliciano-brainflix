@@ -5,7 +5,6 @@
     padding:0 1rem;
 }
 
-
 .comments-list{
     list-style-type: none;
     border-bottom: solid 1px $mercury;
@@ -13,6 +12,13 @@
     padding-left: 3.25rem;
     position: relative;
 
+    &__item--name{
+        font-size: 14px;
+        font-weight: 700;
+    }
+    &__item--date{
+        font-size: 13px;
+    }
     &__item{
         display: flex;
         justify-content: space-between;
@@ -23,6 +29,7 @@
     
     &__item--comment{
         padding: 1rem 0;
+        font-size: 13px;
     }
     
     &__item--avatar{
@@ -35,4 +42,26 @@
         left: 0;
     }
     
+}
+
+@include tablet{
+    .comments-list{
+        &__item--date{
+            font-size: 14px;
+        }
+        &__item--comment{
+            font-size: 14px;
+        }
+    }
+}
+
+@include desktop{
+    .comments-list{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        &__item--avatar{
+            top: 2rem;
+        }
+    }
 }

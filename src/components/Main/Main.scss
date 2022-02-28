@@ -1,11 +1,25 @@
 @use '../../styles/partials/colors' as *;
 @use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/global' as *;
+
+@include tablet{
+    .main-small-container{
+        padding-left: 36px;
+    }
+}
 
 @include desktop{
     .main-container{
         display: flex;
+        
     }
     .main-small-container{
         flex-direction: column;
+        padding-left: 7.5rem;
+        
+    }
+    .video-list-container{
+        padding-right: 7.5rem;
+        border-left: solid 1px $mercury;
     }
 }

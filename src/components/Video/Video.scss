@@ -11,8 +11,13 @@ body,h1,h2,h3,p{
 
 .video-list__item--title{
     padding-bottom: 1rem;
+    font-size: 14px;
+    font-weight: 700;
 }
-
+.video-list__item--channel{
+    font-size: 14px;
+    font-weight: 400;
+}
 .video-list__item{
     list-style-type: none;
     display: flex;

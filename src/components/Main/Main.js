@@ -22,11 +22,13 @@ export default function Main({Vids, currentVideo, changeVideo}){
                 currentVideo={currentVideo}
             />
             </div> 
+            <div className="video-list-container">
             <VideoList
                 Vids={Vids}
                 currentVideo={currentVideo}
                 changeVideo={changeVideo}
             />
+            </div>
         </div>
         </>
     )
