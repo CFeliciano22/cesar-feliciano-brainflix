@@ -2,7 +2,7 @@ import './VideoList.scss';
 import Video from '../Video/Video';
 
 
-export default function VideoList({Vids, currentVideo, changeVideo}){
+export default function VideoList({Vids, currentVideo}){
    
     return(
         <section className='video-list'>
@@ -17,7 +17,6 @@ export default function VideoList({Vids, currentVideo, changeVideo}){
                     title={video.title}
                     channel={video.channel}
                     image={video.image}
-                    // changeVideo={changeVideo} 
                 />
                 )
             })

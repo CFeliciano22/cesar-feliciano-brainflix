@@ -1,7 +1,7 @@
 import './Video.scss';
 import { Link } from 'react-router-dom';
 
-export default function Video ({ id, title, channel, image, changeVideo}){
+export default function Video ({ id, title, channel, image}){
     return(
         <li className="video-list__items" >
         <Link to={`/video/${id}`} className='video-list__item'>

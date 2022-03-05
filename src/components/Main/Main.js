@@ -5,14 +5,11 @@ import VideoList from "../VideoList/VideoList";
 import Comments from "../Comments/Comments";
 import './Main.scss'
 import Form from "../Form/Form";
-// import Vids from '../../data/video-details.json';
 import axios from "axios";
 
 const Url ='https://project-2-api.herokuapp.com/videos/';
 const ApiKey = '?api_key=cb37a238-0bd0-4f02-9855-6ae33c69f64d/';
 
-
-//  export default function Main({Vids, currentVideo, changeVideo}){
     class Main extends React.Component {
         state = {
           Vids: [],
@@ -34,16 +31,16 @@ const ApiKey = '?api_key=cb37a238-0bd0-4f02-9855-6ae33c69f64d/';
                 .catch(err => console.log(err))
         }
 
-componentDidMount(){
-axios.get(Url + ApiKey).then ((response)=>{
-    console.log(response.data)
-    this.setState({
-        Vids:response.data
-    })
-    const videoId =  this.props.match.params.id ||  response.data[0].id 
-    this.getVideoById(videoId);
-})
-}
+        componentDidMount(){
+        axios.get(Url + ApiKey).then ((response)=>{
+            console.log(response.data)
+            this.setState({
+                Vids:response.data
+            })
+            const videoId =  this.props.match.params.id ||  response.data[0].id 
+            this.getVideoById(videoId);
+        })
+        }
 
 componentDidUpdate(prevProps,prevState){
     const videoId =  this.props.match.params.id || this.state.Vids[0].id 
@@ -53,13 +50,6 @@ componentDidUpdate(prevProps,prevState){
     }
 }
 
-
-    //   changeVideo = (id) => {
-    //     const newVideoId = this.state.Vids.findIndex(video => id === video.id)
-    //     this.setState({
-    //       currentVideo:this.state.Vids[newVideoId]
-    //     })
-    //   }
       render(){
     return(
         <>
@@ -76,14 +66,12 @@ componentDidUpdate(prevProps,prevState){
             />
             <Comments
                 comments={this.state.comments}
-                // currentVideo={this.state.currentVideo}
             />
             </div> 
             <div className="video-list-container">
             <VideoList
                 Vids={this.state.Vids}
                 currentVideo={this.state.currentVideo}
-                // changeVideo={this.changeVideo}
             />
             </div>
         </div>
