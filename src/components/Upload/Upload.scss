@@ -1,0 +1,113 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+
+.upload{
+    display: flex;
+    padding: 0 1rem;
+    border-top: solid 1px $mercury;
+    padding-top: 2rem;
+   flex-direction: column;
+}
+.upload__title{
+    padding-bottom:1.5rem ;
+    font-size: 2rem;
+    font-weight: 400;
+}
+.upload__thumbnail--image{
+    width: 100%;
+    border-radius: 4px;
+    padding-bottom: 1rem;
+}
+.upload__form{
+    display: flex;
+    flex-direction: column;
+}
+.upload__button--publish{
+        color: $white;
+        background-color: $blue;
+        border: none;
+        border-radius: .3125rem;
+        height: 2.5rem;
+        width: 100%;
+        
+}
+.upload__form--input{
+    padding: .5rem 0 .5rem .5rem;
+    border-radius: 4px;
+    border: solid 1px $mercury;
+    background-color: $alabaster;
+}
+.upload__button--cancel{
+    background-color: white;
+    color: $blue;
+    border: none;
+    padding-top: 2.25rem;
+}
+.upload__button{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 1rem;
+    position: relative;
+}
+
+.upload__thumbnail--label{
+    font-size: .8125rem;
+    color: $silver;
+    font-weight: 400;
+    padding-bottom: .25rem;
+}
+.upload__form--label{
+    font-size: .8125rem;
+    color: $silver;
+    font-weight: 400;
+    padding-bottom: .25rem;
+}
+
+.upload__form--title{
+    margin-bottom: 1rem;
+}
+
+.upload__button--icon{
+    position: absolute;
+    left: .5rem;
+    top: 1.5rem;
+}
+
+@include tablet{
+    .upload{
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+    .upload__title{
+        border-bottom:solid 1px $mercury;
+    }
+    .upload__thumbnail--label{
+        padding-top: 1.5rem;
+    }
+    .upload__button{
+        flex-direction: row-reverse;
+    }
+    .upload__button--publish{
+        width: 12.5rem;
+    }
+    .upload__button--cancel{
+        padding-top: 0;
+        padding-right: 3rem;
+    }
+    .upload__button--icon{
+        left: 0;
+        right: 10rem;
+        background-color: black;
+    }
+}
+
+@include desktop{
+    .upload{
+    padding: 2rem 7.5rem 0;
+    }
+    .upload__content-container{
+        display: flex;
+    }
+}
