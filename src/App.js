@@ -26,14 +26,10 @@ class App extends React.Component {
    <BrowserRouter>
       <Header/>
        <Switch>
-        {/* <Route path='/' exact component={Main}/> */}
+        <Route path='/' exact component={Main}/>
         <Route path='/upload' exact component={Upload}/>
-        {/* <Route 
-        path='/video/:id'
-        render={(props)=>{
-          return <Main {...props}/>;
-        }}/> */}
-        <Main
+        <Route path='/video/:id' component={Main}
+        
           // Vids={this.state.Vids}
           // currentVideo={this.state.currentVideo}
           // changeVideo={this.changeVideo} 

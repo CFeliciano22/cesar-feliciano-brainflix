@@ -1,10 +1,10 @@
 import './Comments.scss';
 
 
-export default function Comments({ currentVideo}){
+export default function Comments({ comments }){
     return (
 <ul className='comments'>
-{currentVideo.comments.map((comment) => {
+{comments.map((comment) => {
     return(
         <li className='comments-list comments-list__border-top'>
             <div className='comments-list__item'>
@@ -15,6 +15,7 @@ export default function Comments({ currentVideo}){
                 <img className='comments-list__item--avatar'/>
           </li>
     )
-})}
-      </ul>
+})
+
+  }  </ul>
     )}

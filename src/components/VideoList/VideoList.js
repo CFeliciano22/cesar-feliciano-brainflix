@@ -8,7 +8,7 @@ export default function VideoList({Vids, currentVideo, changeVideo}){
         <section className='video-list'>
         <h2 className='video-list__header'>NEXT VIDEOS</h2>
             <ul className='video-list__listing'>
-            {Vids.filter(video => video.id !== currentVideo.id)
+             {Vids.filter(video => video.id !== currentVideo.id)
             .map(video => {
                 return(
                     <Video
@@ -17,7 +17,7 @@ export default function VideoList({Vids, currentVideo, changeVideo}){
                     title={video.title}
                     channel={video.channel}
                     image={video.image}
-                    changeVideo={changeVideo}
+                    // changeVideo={changeVideo} 
                 />
                 )
             })
