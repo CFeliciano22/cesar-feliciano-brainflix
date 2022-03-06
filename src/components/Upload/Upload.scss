@@ -106,8 +106,42 @@
 @include desktop{
     .upload{
     padding: 2rem 7.5rem 0;
+    
     }
     .upload__content-container{
         display: flex;
     }
+
+    .upload__container{
+        width: 60%;
+    }
+    .upload__thumbnail{
+        width: 40%;
+    }
+    .upload__thumbnail--image{
+        width: 100%;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid $mercury;
+    }
+    .upload__form{
+        padding-top: 1.5rem;
+        
+    }
+   .upload__form--label-description{
+       padding-top: 1.5rem;
+
+   }
+   .upload__form--description{
+       padding-bottom: 7.9rem;
+   }
+   .upload__button{
+       margin-top: 2rem;
+       border-top: 1px solid $mercury;
+   }
+   .upload__form--input{
+       margin-left: 1.5rem;
+   }
+   .upload__form--label{
+       margin-left: 1.5rem;
+   }
 }
