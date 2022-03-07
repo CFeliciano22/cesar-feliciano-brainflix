@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.scss';
 import Header from "./components/Header/Header";
-import Main from './components/Main/Main';
-import Upload from './components/Upload/Upload';
+import Upload from './Pages/Upload/Upload';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import HomePage from './Pages/HomePage/HomePage';
 
 
-class App extends React.Component {
+
+export default class App extends React {
 
   render() {
   return (
@@ -14,9 +15,9 @@ class App extends React.Component {
    <BrowserRouter>
       <Header/>
        <Switch>
-        <Route path='/' exact component={Main}/>
+        <Route path='/' exact component={HomePage}/>
         <Route path='/upload' exact component={Upload}/>
-        <Route path='/video/:id' component={Main}/>
+        <Route path='/video/:id' component={HomePage}/>
         </Switch>
     </BrowserRouter>
       
@@ -25,4 +26,4 @@ class App extends React.Component {
 }
 
 
-export default App;
+// export default App;

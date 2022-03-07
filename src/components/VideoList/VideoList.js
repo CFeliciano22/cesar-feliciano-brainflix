@@ -2,7 +2,7 @@ import './VideoList.scss';
 import Video from '../Video/Video';
 
 
-export default function VideoList({Vids, currentVideo}){
+function VideoList({Vids, currentVideo}){
    
     return(
         <section className='video-list'>
@@ -27,6 +27,7 @@ export default function VideoList({Vids, currentVideo}){
     )
 
 }
+export default VideoList;
   
         
 

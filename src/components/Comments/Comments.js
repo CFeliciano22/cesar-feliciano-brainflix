@@ -12,7 +12,7 @@ export default function Comments({ comments }){
                 <p className='comments-list__item--date'>{ new Date (comment.timestamp).toLocaleDateString()}</p>
             </div>
                 <p className='comments-list__item--comment'>{comment.comment}</p>
-                <img className='comments-list__item--avatar'/>
+                <img className='comments-list__item--avatar' alt='avatar'/>
           </li>
     )
 })
