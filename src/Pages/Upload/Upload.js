@@ -1,11 +1,11 @@
 import './Upload.scss';
 import Thumbnail from '../../assets/Images/Upload-video-preview.jpg';
 import Icon from '../../assets/Icon/publish.svg';
-import{Component} from 'react';
-import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
+import React from 'react';
+import { Redirect } from 'react-router-dom';
 
 
-export default class Upload extends Component{
+export default class Upload extends React.Component{
     state = {
         submit: false
     }

@@ -7,7 +7,7 @@ import HomePage from './Pages/HomePage/HomePage';
 
 
 
-export default class App extends React {
+class App extends React.Component {
 
   render() {
   return (
@@ -26,4 +26,4 @@ export default class App extends React {
 }
 
 
-// export default App;
+export default App;

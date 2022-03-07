@@ -49,7 +49,7 @@ import Form from "../Form/Form";
 //         this.getVideoById(videoId)
 //     }
 // }
-function Main(currentVideo, Vids, comments){
+function Main({currentVideo, Vids, comments}){
     
     return(
         <>

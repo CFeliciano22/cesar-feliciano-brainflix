@@ -46,6 +46,9 @@ componentDidUpdate(prevProps,prevState){
 }
 
 render(){
+    if(this.state.Vids === [] || this.state.currentVideo === {} || this.state.comments === []){
+        return "Loading..."
+    }
     return(
         <>
             <Main 
