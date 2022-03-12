@@ -2,8 +2,9 @@ import axios from "axios";
 import { Component } from "react";
 import Main from "../../components/Main/Main";
 
-const Url ='https://project-2-api.herokuapp.com/videos/';
-const ApiKey = '?api_key=cb37a238-0bd0-4f02-9855-6ae33c69f64d/';
+// const Url ='https://project-2-api.herokuapp.com/videos/';
+// const ApiKey = '?api_key=cb37a238-0bd0-4f02-9855-6ae33c69f64d/';
+const Url = "http://localhost:5000/videos/";
 
 export default class HomePage extends Component{
         state = {
@@ -14,7 +15,7 @@ export default class HomePage extends Component{
         
         getVideoById = (id) => {
             axios
-                .get(`${Url}${id}${ApiKey}`)
+                .get(`${Url}${id}`)
                 .then(response => {
                     console.log(response.data)
                     this.setState({
@@ -27,7 +28,7 @@ export default class HomePage extends Component{
         }
 
         componentDidMount(){
-        axios.get(Url + ApiKey).then ((response)=>{
+        axios.get(Url).then ((response)=>{
             console.log(response.data)
             this.setState({
                 Vids:response.data

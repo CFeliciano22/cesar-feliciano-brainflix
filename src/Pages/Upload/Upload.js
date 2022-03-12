@@ -3,19 +3,25 @@ import Thumbnail from '../../assets/Images/Upload-video-preview.jpg';
 import Icon from '../../assets/Icon/publish.svg';
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-
+import axios from 'axios';
+const url = 'http://localhost:5000/videos/';
+const {v4: uuidv4} = require('uuid')
 
 export default class Upload extends React.Component{
     state = {
         submit: false
     }
 
+
     submitEvent = (e) =>{
         e.preventDefault();
+        const id = uuidv4();
         const title = e.target.title.value;
-        const description = e.target.title.value;
+        console.log(title);
+        const description = e.target.description.value;
         if(title && description){
             alert('Video was uploaded successfully!');
+            axios.post(url, {id, title, description})
             this.setState({submit:true})
         }else {
             alert('Please fill out details!')
@@ -24,7 +30,7 @@ export default class Upload extends React.Component{
     
     render(){
         if ( this.state.submit){
-            return <Redirect to='/'/>
+            return <Redirect to='/'/>;
         }
 
 
