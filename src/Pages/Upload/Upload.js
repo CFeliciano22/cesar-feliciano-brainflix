@@ -4,6 +4,8 @@ import Icon from '../../assets/Icon/publish.svg';
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+
 const url = 'http://localhost:5000/videos/';
 const {v4: uuidv4} = require('uuid')
 
@@ -52,7 +54,7 @@ export default class Upload extends React.Component{
                         <div className='upload__button'>
                         <button type='submit'className='upload__button--publish'>PUBLISH</button>
                         <img  className='upload__button--icon' src={Icon} alt='publish svg'/>
-                        <button className='upload__button--cancel'>CANCEL</button>
+                        <Link to="/"><button className='upload__button--cancel'>CANCEL</button></Link>
                         </div>
                     </form>
                 </div>
