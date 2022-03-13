@@ -28,6 +28,9 @@
         border: solid 1px $mercury;
         background-color: $alabaster;
        }
+    &--description{
+        padding: .5rem 0 3rem .5rem;
+    }
     &--title{
         margin-bottom: 1rem;
     }
