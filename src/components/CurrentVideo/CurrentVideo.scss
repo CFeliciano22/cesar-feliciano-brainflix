@@ -4,10 +4,22 @@
 
 .video{
     width: 100%;
+
+    @include tablet{
+        background-color: black;
+        padding: 0 2.25rem;
+    }
+    @include desktop{
+        padding: 0 11.25rem;
+    }
     &__title{
         padding: 1.5rem 0;
         border-bottom: solid 1px $mercury;
         
+        @include tablet{
+            border-bottom: none;
+            padding-bottom: 0;
+        }
     }
     &__comments{
         padding-bottom: 1rem;  
@@ -21,6 +33,19 @@
         display: flex;
         justify-content: space-between;
     
+        @include tablet{
+            padding-bottom: 0;
+        }
+        &--first{
+            @include tablet{
+                display: flex;
+            }
+        }
+        &--date{
+            @include tablet{
+            padding-left: 1rem;
+            }
+        }
         &--channel{
             padding-bottom: 1rem;
         }
@@ -34,21 +59,18 @@
         &--likes-image{
             padding-right: 1rem;
             
+            @include tablet{
+                padding-left: 1rem;
+            }
         }
     }
     &__description{
         padding: 1rem 0;
     }
 }
-
-
-
-
 .comments{
     padding:0 1rem;
 }
-
-
 .comments-list{
     list-style-type: none;
     border-bottom: solid 1px $mercury;
@@ -76,41 +98,5 @@
         position: absolute;
         top: 1rem;
         left: 0;
-    }
-    
-}
-
-
-    
-
-@include tablet{
-  .video{
-      background-color: black;
-      padding: 0 2.25rem;
-
-    &__title{
-        border-bottom: none;
-        padding-bottom: 0;
-    }
-    &__props{
-        padding-bottom: 0;
-
-        &--first{
-            display: flex;
-        }
-        &--date{
-            padding-left: 1rem;
-        }
-        &--likes-image{
-            padding-left: 1rem;
-        }
-           
-    }
-  }  
-}
-
-@include desktop{
-    .video{
-        padding: 0 11.25rem;
     }
 }

@@ -14,13 +14,27 @@ body,h1,h2,h3,p{
 }
 header{
     padding: 1rem;
+
+    @include desktop{
+        padding: 1rem 6.25rem;
+    }
 }
 .container{
     flex-direction: column;
     display: flex;
     position: relative;
+
+    @include tablet{
+        flex-direction: row;
+    }
 }
 .menu{
+    @include tablet{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1.25rem;
+    }
     &__logo{
         display: block;
         margin-left: auto;
@@ -28,6 +42,12 @@ header{
         width: 8.5625rem;
         padding-bottom: 1rem;
         
+        @include tablet{
+            display: flex;
+            width: 100%;
+            padding: 0;
+            margin-right: 1.5rem;
+        }
 }
     &__button{
         color: $white;
@@ -37,11 +57,19 @@ header{
         height: 2.5rem;
         width: 100%;
         
+        @include tablet{
+            height: 3rem;
+            width: 10rem;
+            margin-right: 3.5rem;
+        }
 
         &--container{
             padding-top: 1rem;
             position: relative;
             
+            @include tablet{
+                padding: 0;
+            }
         }
 }
     &__bar{
@@ -52,84 +80,49 @@ header{
             position: absolute;
             left: .5rem;
             top: .5rem;  
-        }
+
+            @include tablet{
+                left: 2.5rem;
+                top: 1rem;
+}
+            }
+        
         &--avatar{
             border-radius: 50%;
             width: 2.25rem;
             height: 2.25rem;
             margin-left: 1rem;
-        }
-        
-}
-}
 
+            @include tablet{
+                width: 3rem;
+                height: 3rem;
+                position: absolute;
+                right: -13.5rem;
+            }
+        }  
+}
+}
 .menu__bar-input{
     padding-left: 2rem;
     height: 2.25rem;
     width: 80vw;
     border-radius: 5px;
     border: 1px solid $mercury;
+    
+    @include tablet{
+        width: 15.5rem;
+        height: 3rem;
+        margin-left: 2rem;
+        justify-content: flex-end;
+        margin-right: 1rem;
+    }
 }
-
 .menu__button-image{
     position: absolute;
     left: .5rem;
     top: 1.5rem;
-}
 
-@include tablet{
-
-.menu{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1.25rem;
-}
-
-.menu__bar-input{
-    width: 15.5rem;
-    height: 3rem;
-    margin-left: 2rem;
-    justify-content: flex-end;
-    margin-right: 1rem;
-    
-}
-.menu__bar--search-icon{
-    left: 2.5rem;
-    top: 1rem;
-}
-.menu__logo{
-    display: flex;
-    width: 100%;
-    padding: 0;
-    margin-right: 1.5rem;
-}
-.menu__button--container{
-    padding: 0;
-    
-}
-.menu__button{
-    height: 3rem;
-    width: 10rem;
-    margin-right: 3.5rem;
-    
-}
-.menu__bar--avatar{
-    width: 3rem;
-    height: 3rem;
-    position: absolute;
-    right: -13.5rem;
-}
-.menu__button-image{
-    top: .75rem;
-}
-.container{
-    flex-direction: row;
-}
-}
-
-@include desktop{
-    header{
-        padding: 1rem 6.25rem;
+    @include tablet{
+            top: .75rem;
+        }
     }
-}

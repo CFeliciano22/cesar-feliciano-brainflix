@@ -1,24 +1,22 @@
 @use '../../styles/partials/colors' as *;
 @use '../../styles/partials/mixins' as *;
 
-.video-list__header{
-    font-size: 24px;
-    font-weight: 400;
-    color: $silver;
-}
-.video-list__listing{
-    padding-left: 1rem;
-}
 
-.video-list__header{
-    padding-left: 1rem;
-}
-
-@include desktop{
-    .video-list__header{
-        padding-top: 1.5rem;
-    }
-    .video-list{
+.video-list{
+    @include desktop{
         margin-left: 1rem;
     }
+    &__header{
+        font-size: 24px;
+        font-weight: 400;
+        color: $silver;
+        padding-left: 1rem;
+
+        @include desktop{
+            padding-top: 1.5rem; 
+        }
+}
+    &__listing{
+        padding-left: 1rem;
+}
 }

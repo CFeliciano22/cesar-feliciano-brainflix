@@ -8,11 +8,26 @@
         border-bottom: solid 1px $mercury;
         font-weight: 700;
         font-size: 24px;
+
+        @include tablet{
+            border-bottom: none;
+            padding-bottom: 0;
+            font-size: 2.25rem;
+        }
+
+        @include desktop{
+            padding-top: 36px;
+            padding-bottom: 24px;
+        }
     }
     &__comments{
         padding-bottom: 1rem;
         font-size: 14px;
         font-weight: 700;  
+
+        @include desktop{
+            padding-bottom: 1.5rem;
+        }
     }
     &__content-container{
         padding: 0 1rem;
@@ -24,12 +39,21 @@
         justify-content: space-between;
         font-size: 13px;
         font-weight: 400;
+
+        @include tablet{
+            padding-bottom: 0;
+            font-size: 14px;
+        }
     
         &--likes{
             color: $silver;
         }
         &--date{
             color: $silver;
+
+            @include tablet{
+                padding-left: 1rem;
+            }
         }
         &--channel{
             padding-bottom: 1rem;
@@ -45,51 +69,28 @@
         &--likes-image{
             padding-right: 1rem;
             
+            @include tablet{
+                padding-left: 1rem;
+            }
         }
+        &--first{
+            @include tablet{
+            display: flex;
+        }
+    }
     }
     &__description{
         padding: 1rem 0;
         font-size: 13px;
         font-weight: 400;
+
+        @include tablet{
+            font-size: 14px;
+        }
+
+        @include desktop{
+            padding-top: 2rem;
+            padding-bottom: 3rem;
+        }
     }
 }
-@include tablet{
-    .video{
-      &__title{
-          border-bottom: none;
-          padding-bottom: 0;
-          font-size: 2.25rem;
-      }
-      &__props{
-          padding-bottom: 0;
-          font-size: 14px;
-  
-          &--first{
-              display: flex;
-          }
-          &--date{
-              padding-left: 1rem;
-          }
-          &--likes-image{
-              padding-left: 1rem;
-          } 
-      }
-      &__description{
-          font-size: 14px;
-      }
-    }  
-  }
-  
- @include desktop{
-     .video__description{
-         padding-top: 2rem;
-         padding-bottom: 3rem;
-     }
-     .video__comments{
-         padding-bottom: 1.5rem;
-     }
-     .video__title{
-         padding-top: 36px;
-         padding-bottom: 24px;
-     }
- }
